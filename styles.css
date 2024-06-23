@@ -1,0 +1,329 @@
+:root {
+    --topbar-height: 60px;
+    --problem-container-border-radius: 20px;
+}
+
+body {
+    background: #f8f4f4;
+    padding-bottom: 50px;
+    font-family: Cabin, serif;
+}
+
+.katex {
+    font-size: 1em !important;
+}
+
+.topbar {
+    height: var(--topbar-height);
+    width: 100%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 5px;
+}
+
+#logo {
+    height: 55px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.settings-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+#settings-button {
+    height: calc(var(--topbar-height)*0.5);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#sidebar_title {
+    color: white;
+    position: absolute;
+    top: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+#sidebar_subtitle {
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-wrap: nowrap;
+}
+
+.content {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.problem_container {
+    position: relative;
+    width: 900px;
+    height: fit-content;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-top: 80px;
+    border-radius: var(--problem-container-border-radius);
+    line-height: 27.5px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.problem_header {
+    background: black;
+    height: 55px;
+    line-height: 55px;
+    color: white;
+    padding-left: 20px;
+    font-size: 20px;
+    border-radius: var(--problem-container-border-radius) var(--problem-container-border-radius) 0 0;
+}
+
+.problem_box {
+    padding-top: 15px;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    border-radius: 0 0 var(--problem-container-border-radius) var(--problem-container-border-radius);
+    font-size: 19px;
+}
+
+.inProblemImage {
+    display: block;
+    margin: auto;
+}
+
+.choices_container {
+    margin-top: -15px;
+}
+
+.choicesHoriz {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 19px;
+    width: fit-content;
+    column-gap: 35px;
+    row-gap: 5px;
+    padding-bottom: 10px;
+    margin-top: -15px;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+.choicesVert {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 19px;
+    width: fit-content;
+    row-gap: 5px;
+    padding-bottom: 10px;
+    margin-top: -15px;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+.choice {
+    display: flex;
+    row-gap: 50px;
+    align-items: center;
+}
+
+.choiceText {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.choiceImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 190px;
+}
+
+#generate_button {
+    position: relative;
+    float: right;
+    text-align: center;
+    margin-right: 20px;
+    line-height: 30px;
+    height: 40px;
+    font-size: 19px;
+    padding-left: 10px;
+    background: black;
+    padding-right: 10px;
+    border: 4px solid white;
+    color: white;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+#generate_button:hover {
+    transform: scale(1.05);
+}
+
+#generate_button_media {
+    display: none;
+    position: relative;
+    text-align: center;
+    line-height: 28px;
+    height: 38px;
+    font-size: 19px;
+    padding-left: 10px;
+    background: white;
+    padding-right: 10px;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: transform .2s;
+    margin-top: 8px;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+}
+
+#generate_button_media:hover {
+    transform: scale(1.02);
+}
+
+.answer_container {
+    display: flex;
+    column-gap: 5px;
+}
+
+#answerForm {
+    flex: 4;
+    background: #383838;
+    background: white;
+    border: 3px solid black;
+    height: 30px;
+    width: calc(100% - 50px);
+    color: white;
+    color: black;
+    font-family: Cabin, serif;
+    font-size: 16px;
+    margin-left: 15px;
+    outline: none;
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+#submit_button {
+    flex: 1;
+    height: 38px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: Cabin, serif;
+    border: 3px solid black;
+    background: white;
+    margin-right: 15px;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#submit_button:hover {
+    transform: scale(1.05);
+}
+
+
+.solution_container {
+    position: relative;
+    width: 900px;
+    background: white;
+    height: auto;
+    line-height: 27.5px;
+    margin: 20px auto auto;
+    border-radius: var(--problem-container-border-radius);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.solution_text_container {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.4s ease-out;
+}
+
+.solution_header {
+    background: black;
+    height: 60px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    line-height: 60px;
+    color: white;
+    padding-left: 20px;
+    font-size: 24px;
+    border-radius: var(--problem-container-border-radius);
+    cursor: pointer;
+}
+
+.solution_box {
+    background: white;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.4s;
+    font-size: 19px;
+    overflow: hidden;
+}
+
+#down_caret {
+    transform: scale(0.65);
+    transition: 0.4s;
+    height: 50px;
+    float: right;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 910px) {
+    .content {
+        width: auto;
+    }
+    .problem_container {
+        width: auto;
+    }
+
+    .solution_container {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    #generate_button {
+        display: none;
+    }
+    #generate_button_media {
+        display: block;
+        padding-left: 10px;
+        background: white;
+        padding-right: 10px;
+        border: 3px solid black;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Olygen</title>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+          integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
+            integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd"
+            crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+            integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+    <script defer type="module" src="loadProblem.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+<div class="topbar">
+    <img src="images/logo.png" alt="logo" id="logo" onclick="window.location.reload();"/>
+    <img src="images/settings-button.png" alt="settings-button" id="settings-button" onclick="useNav()"/>
+</div>
+<div id="settings-container" class="settings-container">
+    <p id="sidebar_title">Settings</p>
+    <p id="sidebar_subtitle">Not yet implemented.</p>
+</div>
+<div class="content">
+    <div class="problem_container">
+        <div class="problem_header"></div>
+        <div class="problem_box">
+
+        </div> <br>
+        <div class="choices_container">
+            <div class="choicesVert">
+                <div class="choice" style="">
+                    <div class="choiceText" style="">(A) It is always zero.</div>
+                </div>
+                <div class="choice">
+                    <div class="choiceText" style="">(B) It points downward, but decreases in magnitude over time.</div>
+                </div>
+                <div class="choice">
+                    <div class="choiceText" style="">(C) It points downward and has constant magnitude.</div>
+                </div>
+                <div class="choice">
+                    <div class="choiceText" style="">(D) It points downward, but increases in magnitude over time.</div>
+                </div>
+                <div class="choice">
+                    <div class="choiceText" style="">(E) None of the above.</div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <img class="inProblemImage" src="physicsImages/FMA2024P14INP1.png" style="height: 125px; margin-top: 15px; margin-bottom: 10px;">
+
+        <div class="choicesHoriz">
+            <div class="choice">
+                <div class="choiceText">(A)</div>
+                <img class="choiceImage" src="">
+            </div>
+            <div class="choice">
+                <div class="choiceText">(B)</div>
+                <img class="choiceImage" src="">
+            </div>
+            <div class="choice">
+                <div class="choiceText">(C)</div>
+                <img class="choiceImage" src="">
+            </div>
+            <div class="choice">
+                <div class="choiceText">(D)</div>
+                <img class="choiceImage" src="">
+            </div>
+            <div class="choice">
+                <div class="choiceText">(E)</div>
+                <img class="choiceImage" src="">
+            </div>
+        </div>
+
+      {
+        "competition": "$F=ma$",
+        "year": 2024,
+        "problem": ,
+        "problemLatex": "",
+        "choicesLatex": "",
+        "answerLetter": "",
+        "answerValue": "",
+        "solutionLatex": ""
+      }
+
+        -->
+        <div class="answer_container">
+            <input id="answerForm" placeholder="Type answer letter here..." autocomplete="off" onkeydown="detectEnterPress(event)">
+            <button id="submit_button" onclick="submitAnswer()">Submit</button>
+        </div>
+        <button id="generate_button_media" onclick="loadNewProblem(); renderMath()">New Problem</button>
+    </div>
+    <div class="solution_container">
+        <button class="solution_header" onclick="showSolution()">
+            Solution
+            <img src="images/down_caret.png" id="down_caret" alt="down_caret">
+        </button>
+        <div class="solution_text_container">
+            <div class="solution_box">
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
