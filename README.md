@@ -1,2 +1,2 @@
 # Olygen
-F=ma problem generator
+F=ma physics olympiad problem generator
